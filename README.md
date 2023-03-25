@@ -72,10 +72,10 @@ nesse caso a mensagem “`malformed HTML`” (sem as aspas).
    `java HtmlAnalyzer inserir-url-aqui`
 5. O programa deve gerar apenas os seguintes tipos de output no
    console padrão:
-   a. Linha de trecho de texto identificado no HTML; ou
-   b. Mensagem “`malformed HTML`“ (caso implementada
+   1. Linha de trecho de texto identificado no HTML; ou
+   2. Mensagem “`malformed HTML`“ (caso implementada
    funcionalidade que vale pontos bônus); ou
-   c. Mensagem “`URL connection error`“ (caso não seja
+   3. Mensagem “`URL connection error`“ (caso não seja
    possível obter o conteúdo HTML por falha de conexão).
 6. O código fonte da solução (apenas arquivos *.java* e
    opcionalmente um *README.md*, compatíveis com UTF-8) deve
