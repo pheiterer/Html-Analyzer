@@ -28,8 +28,8 @@ public final class Validation {
      * @return true or false
      */
     public static boolean isHTMLStructuredAccordingToPremises(String html) {
-        String regex = "(<[a-z]*>\\n)" +    //tags abertura sem atributo
-                "|(</\\w*>\\n)" +           //tags de fechamento
+        String regex = "(<[a-z]+>\\n)" +    //tags abertura sem atributo
+                "|(</[a-z]+>\\n)" +         //tags de fechamento
                 "|([^<\\s].*[^>]\\n)" +     //texto
                 "|(</html>)";               //ultima tag
         Matcher matcher = Pattern.compile(regex).matcher(html);
@@ -41,12 +41,12 @@ public final class Validation {
 
         while (matcher.find()) {
             String match = matcher.group();
-            Matcher matcherLine = Pattern.compile("<(/?\\w+)(\\s+[^>]*)?(/?)>").matcher(match);
+            Matcher matcherLine = Pattern.compile("<(/?\\w+)>").matcher(match);
             while (matcherLine.find()) {
                 String tag = matcherLine.group(1);
 
                 if (tag.startsWith("/")) {
-                    if (tagStack.empty() || !tagStack.pop().equals(tag.substring(1))) {
+                    if (!tagStack.pop().equals(tag.substring(1))) {
                         return false;
                     }
                 } else {

@@ -30,7 +30,7 @@ public final class DeepestText {
             }
 
             while (text.find()) {
-                String textHTML = text.group(1).trim();
+                String textHTML = text.group(1);
                 if (!textHTML.isEmpty()) {
                     int level = tagStack.size();
                     if (level > deepestLevel) {
