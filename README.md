@@ -77,21 +77,3 @@ nesse caso a mensagem “`malformed HTML`” (sem as aspas).
    funcionalidade que vale pontos bônus); ou
    3. Mensagem “`URL connection error`“ (caso não seja
    possível obter o conteúdo HTML por falha de conexão).
-6. O código fonte da solução (apenas arquivos *.java* e
-   opcionalmente um *README.md*, compatíveis com UTF-8) deve
-   ser entregue em um arquivo tar (.tar ou .tar.gz), cujo
-   nome deve ser igual ao nome do(a) candidato(a), sem acentos
-   ou cedilhas e com espaços substituídos por underscore (“`_`”).
-   Não deve haver diretórios dentro do arquivo tar. Para um
-   candidato chamado “Fulano de Tal”, o arquivo entregue deve
-   ter o nome *fulano_de_tal.tar* (ou *.tar.gz*).
-
-## Avaliação
-
-A solução será avaliada de acordo com os requisitos funcionais e
-técnicos descritos nas seções anteriores, bem como em relação ao
-uso de boas práticas de programação e *design* de software
-orientado a objetos. Testes automatizados serão aplicados pela
-equipe de avaliação da Axur, de forma que **soluções que não
-seguirem à risca os requisitos serão desclassificadas
-automaticamente.**
